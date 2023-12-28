@@ -7,6 +7,7 @@
     --ice-white:hsl(0, 0%, 100%);
     --ultra-blue:hsl(255, 100%, 50%);
     --dark-matter:rgb(43, 6, 12);
+    --lava-red:red;
 }
 
 *{
@@ -34,13 +35,12 @@ body{
     background-color:var(--cloud-blue);
     width:9em;
     text-align: center;
-    transform: translatey(16px);
+    transform: translatey(50px);
     padding:30px 30px;
     line-height: 20px;
     font-family: cursive;
     border-radius: 5px;
-    display: flex;
-    flex-wrap: wrap;
+   
     
 }
 .myself ul{
@@ -54,16 +54,18 @@ body{
     display: flex;
     flex-wrap: wrap;
     text-decoration: none;
-    font-size:20px;
+    font-size:24px;
     color:var(--cloud-blue);
-    padding:8px 8px;
+    padding:10px 8px;
+    transition:all 0.4s ease-in-out;
     
 }
 .myself a:hover{
     text-decoration: underline;
     color:white;
-    font-style: italic;
+    font-size:29px;
     font-weight: bold;
+    justify-content: space-evenly;
 }
 
 img{
@@ -87,13 +89,11 @@ img{
     
 }
 .heading{
-    margin:15px;
+    margin:10px;
     font-family: cursive;
     color:var(--cloud-blue);
-    text-shadow:2px 2px 3px black;
+    text-shadow:2px 2px 3px black, 1px 2px 20px var(--cloud-blue);
     font-size: 35px;
-    
-
 }
     
 .s1 p{
@@ -129,13 +129,21 @@ img{
     height: 200px;
     border:solid 2px;
     margin-right:15px;
+    filter: blur(4px);
+    transform:translateX(-10px);
+    animation-name: rotate;
+    animation-duration: 3s;
     
+}
+.boxes:hover{
+    filter: blur(0px);
 }
 #box1{
     width:64.5em;
     height:400px;
     background-image: url(box1.jpeg);
     background-size: cover;
+    border-radius:7px;
     transition: all 0.6s ease-in-out;
     
 
@@ -153,7 +161,7 @@ img{
     text-align: center;
     width:32em;
     height:3em;
-    margin:-1.5em 0 0.5em 6.5em;
+    margin:-1.5em 0 0.5em 5.5em;
     background: linear-gradient(to bottom, var(--galaxy-purple), var(--nova-blue));
     border-radius:10px;
     color:var(--cloud-blue);
@@ -163,9 +171,8 @@ img{
 }
 
 #box1 h2:hover{
-box-shadow:0px 0px 50px var(--ultra-blue), 0px 0px 60px var(--ice-white);
-border-style: dashed;
-width:700px;
+box-shadow:0px 0px 50px var(--lava-red), 0px 0px 10px var(--ice-white);
+border-style: inset;
 }
 
 #box2{
@@ -177,7 +184,6 @@ width:700px;
 #box2:hover{
     box-shadow: 0px 0px 30px var(--ice-white), 0px 0px 90px var(--ultra-blue);
     border-radius: 20px;
-    border-style:dashed;
    height:300px;
    cursor: pointer;
 }
@@ -187,7 +193,7 @@ width:700px;
     text-align: center;
     width:15em;
     height:2.5em;
-    margin:-1em 0 0.5em 2.9em;
+    margin:-1.4em 0 0.5em 2.9em;
     background: linear-gradient(to bottom, var(--galaxy-purple), var(--nova-blue));
     border-radius:10px;
     color:var(--cloud-blue);
@@ -195,8 +201,8 @@ width:700px;
     transition:all 0.4s ease-in-out;
 }
 #box2 h2:hover{
-    box-shadow:0px 0px 50px var(--glow-green), 0px 0px 60px var(--ice-white);
-    border-style: dashed;
+    box-shadow:0px 0px 50px var(--lava-red), 0px 0px 10px var(--ice-white);
+    border-style: outset;
     
 }
 #box3{
@@ -210,7 +216,7 @@ width:700px;
     text-align: center;
     width:15em;
     height:2.5em;
-    margin:-1em 0 0.5em 2.9em;
+    margin:-1.4em 0 0.5em 2.9em;
     background: linear-gradient(to bottom, var(--galaxy-purple), var(--nova-blue));
     border-radius:10px;
     color:var(--cloud-blue);
@@ -220,15 +226,116 @@ width:700px;
 #box3:hover{
     box-shadow: 0px 0px 30px var(--ice-white), 0px 0px 90px var(--ultra-blue);
     border-radius: 20px;
-    border-style:dashed;
+    border-style:inset;
    height:300px;
    cursor: pointer;
 }
 #box3 h2:hover{
-    box-shadow:0px 0px 50px var(--glow-green), 0px 0px 60px var(--ice-white);
-    border-style: dashed;
+    box-shadow:0px 0px 50px var(--lava-red), 0px 0px 10px var(--ice-white);
+    border-style: inset;
+}
+#box4{
+ background-image:url(box4.png);
+ background-repeat: no-repeat;
+ background-size: cover;
+ transition: all 0.6s ease-in-out;
+}
+#box4:hover{
+    box-shadow: 0px 0px 30px var(--ice-white), 0px 0px 90px var(--ultra-blue);
+    border-radius: 20px;
+    border-style:inset;
+   height:300px;
+   cursor: pointer;
+}
+#box4 h2{
+    position: relative;
+    border:solid 2px var(--ice-white);
+    text-align: center;
+    width:15em;
+    height:2.5em;
+    margin:-1.4em 0 0.5em 2.9em;
+    background: linear-gradient(to bottom, var(--galaxy-purple), var(--nova-blue));
+    border-radius:10px;
+    color:var(--cloud-blue);
+    box-shadow:0px 0px 10px var(--ice-white), 0px 0px 15px var(--cloud-blue);
+    transition:all 0.4s ease-in-out;
+}
+#box4 h2:hover{
+    box-shadow:0px 0px 50px var(--lava-red), 0px 0px 10px var(--ice-white);
+    border-style: inset;
 }
 
+#box5{
+    background-image:url(box5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.6s ease-in-out;
+   }
+   #box5:hover{
+       box-shadow: 0px 0px 30px var(--ice-white), 0px 0px 90px var(--ultra-blue);
+       border-radius: 20px;
+       border-style:inset;
+      height:300px;
+      cursor: pointer;
+   }
+   #box5 h2{
+       position: relative;
+       border:solid 2px var(--ice-white);
+       text-align: center;
+       width:15em;
+       height:2.5em;
+       margin:-1.4em 0 0.5em 2.9em;
+       background: linear-gradient(to bottom, var(--galaxy-purple), var(--nova-blue));
+       border-radius:10px;
+       color:var(--cloud-blue);
+       box-shadow:0px 0px 10px var(--ice-white), 0px 0px 15px var(--cloud-blue);
+       transition:all 0.4s ease-in-out;
+   }
+   #box5 h2:hover{
+       box-shadow:0px 0px 50px var(--lava-red), 0px 0px 10px var(--ice-white);
+       border-style: inset;
+   }
+   
+   .foot{
+    display:flex;
+    margin-top: 90px;
+    
+   }
+   .foot-nav{
+    text-align: center;
+    margin: auto;
+   }
+   .foot-nav ul{
+    display:flex;
+    flex-wrap: wrap;
+    list-style: none;
+   }
+   .foot-nav a{
+    padding:15px 15px;
+    color:var(--sooth-grey);
+    text-decoration: none;
+    font-size:25px;
+    transition: all 0.4s ease-in-out;
+   }
+   #lastline{
+    position: relative;
+    margin-left: 0%;
+   }
+   .foot-nav a:hover{
+    text-decoration: underline;
+    color:var(--ice-white);
+    font-size:30px;
+    font-weight:bold;
+   }
+   @keyframes rotate{
+    from{transform: rotatey(100deg);}
+   }
+
+   
+
+  
+   
+   
 
 
 
