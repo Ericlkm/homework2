@@ -86,7 +86,6 @@ img{
 .s1{
     display:flex;
     
-    
 }
 .heading{
     margin:10px;
@@ -100,6 +99,8 @@ img{
     width:80%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color:var(--sooth-grey);
+    display: flex;
+    flex-wrap: wrap;
 }
 .line1{
     background-color:var(--cloud-blue);
@@ -133,7 +134,6 @@ img{
     transform:translateX(-10px);
     animation-name: rotate;
     animation-duration: 3s;
-    
 }
 .boxes:hover{
     filter: blur(0px);
@@ -210,6 +210,13 @@ border-style: inset;
     background-size: cover;
     transition: all 0.6s ease-in-out;
 }
+#box3:hover{
+    box-shadow: 0px 0px 30px var(--ice-white), 0px 0px 90px var(--ultra-blue);
+    border-radius: 20px;
+    border-style:inset;
+   height:300px;
+   cursor: pointer;
+}
 #box3 h2{
     position: relative;
     border:solid 2px var(--ice-white);
@@ -222,13 +229,6 @@ border-style: inset;
     color:var(--cloud-blue);
     box-shadow:0px 0px 10px var(--ice-white), 0px 0px 15px var(--cloud-blue);
     transition:all 0.4s ease-in-out;
-}
-#box3:hover{
-    box-shadow: 0px 0px 30px var(--ice-white), 0px 0px 90px var(--ultra-blue);
-    border-radius: 20px;
-    border-style:inset;
-   height:300px;
-   cursor: pointer;
 }
 #box3 h2:hover{
     box-shadow:0px 0px 50px var(--lava-red), 0px 0px 10px var(--ice-white);
@@ -328,7 +328,7 @@ border-style: inset;
     font-weight:bold;
    }
    @keyframes rotate{
-    from{transform: rotatey(100deg);}
+    from{transform:rotateX(100deg);}
    }
 
    
