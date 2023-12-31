@@ -13,6 +13,7 @@
 *{
     box-sizing: border-box;
     margin: 0px;
+    padding:0px;
     
     
 }
@@ -355,9 +356,42 @@ border-style: inset;
     from{transform:rotateX(100deg);}
    }
 
-   
-
-  
+   @media all and (max-width:600px){
+    .title{
+        margin-bottom:100px;
+    }
+    .title h1{
+        display:block;
+        margin:auto;
+        text-align: center;
+        width:100%;
+        box-shadow: 0px 0px 10px var(--ice-white);
+        
+    }
+    .myself ul{
+        display: flex;
+        text-align: center;
+        margin: auto;
+        margin-top:90px;   
+    }
+    .myself a:hover{
+        font-size:20px;
+    }
+        
+    .myself li{
+        margin:0.5rem;
+    }
+    .line1{
+        display:none;
+    }
+    .foot{
+        display:block;
+        text-align: center;
+    }
+    .foot-nav ul{
+        justify-content:center;
+    }
+}
    
    
 
