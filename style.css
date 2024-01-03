@@ -108,7 +108,6 @@ body{
 
 .s1{
     display:flex;
-    
 }
 .heading{
     margin:10px;
@@ -120,19 +119,20 @@ body{
 }
     
 .s1 p{
-    width:85%;
+    width:87%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color:var(--sooth-grey);
     display: flex;
     flex-wrap: wrap;
     margin-bottom:40px;
 }
+#firstline{
+    transform: translateX(-1rem);
+}
 .line1{
     background-color:var(--cloud-blue);
     width:3px;
     height:25dvh;
-    margin:3px;
-    margin-right:10px;
 }
 
 .s2{
@@ -142,7 +142,7 @@ body{
 #line{
     height:150dvh;
     width:6px;
-    margin-left:70px;
+    margin-left:50px;
 }
 .container{
     display: flex;
@@ -155,7 +155,7 @@ body{
     height: 200px;
     border:solid 2px;
     margin-right:15px;
-    filter: blur(4px);
+    filter: blur(2px);
     transform:translateX(-10px);
     animation-name: rotate;
     animation-duration: 3s;
@@ -355,8 +355,30 @@ border-style: inset;
    @keyframes rotate{
     from{transform:rotateX(100deg);}
    }
+   @keyframes grow{
+    from{transform: scalex(1.5);}
+   }
+   @keyframes glow{
+    from{box-shadow: 0px 0px 70px var(--lava-red),inset 0px 0px 70px var(--ice-white);}
+   }
 
-   @media all and (max-width:600px){
+   @media all and (max-width:500px){
+
+    body{
+        display:block;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+    }
+    .s1{
+        display:block;
+        margin-left:10px;
+    }
+    .s1 p{
+        margin-left:30px;
+        
+    }
+
     .title{
         margin-bottom:100px;
     }
@@ -364,9 +386,15 @@ border-style: inset;
         display:block;
         margin:auto;
         text-align: center;
-        width:100%;
+        width:110%;
         box-shadow: 0px 0px 10px var(--ice-white);
         
+    }
+    .img{
+        width:110%;
+    }
+    .img h3{
+        margin-right:90px;
     }
     .myself ul{
         display: flex;
@@ -384,13 +412,50 @@ border-style: inset;
     .line1{
         display:none;
     }
+    .s2{
+        display:block;
+        text-align: center;
+        margin-top: 80px;
+    }
+    .container{
+        display: block;
+        justify-content: center;
+      
+        flex-direction: column;
+    }
+
+    .boxes{
+        
+        width:350px;
+        margin-top:50px;
+        animation-name: grow, glow;
+        animation-duration: 3s;
+        filter: none;
+        margin-left:70px;
+        
+    }
+    #box2 h2,#box3 h2,#box4 h2,#box5 h2{
+        width:250px;
+        margin-left:50px;
+    }
+    #box1{
+        width:350px;
+        height:250px;
+    }
+    #box1 h2{
+        width:250px;
+        height:3.5rem;
+        margin-left:55px;
+    }
     .foot{
         display:block;
         text-align: center;
     }
     .foot-nav ul{
-        justify-content:center;
+        text-align: center;
+        justify-content: space-evenly;
     }
+
 }
    
    
