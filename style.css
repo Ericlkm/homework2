@@ -42,7 +42,16 @@ body{
     font-family: cursive;
     border-radius: 5px;
    
-    
+}
+.title h1::after{
+    content:" ";
+    width:30px;
+    height:20px;
+    background:linear-gradient(to bottom,var(--galaxy-purple),var(--lava-red));
+    position: absolute;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow:0px 0px 15px var(--lava-red);
 }
 .myself ul{
     list-style: none;
@@ -50,6 +59,9 @@ body{
      display: flex;
      flex-wrap: wrap;
      justify-content: space-evenly;
+}
+.myself li{
+    display:inline;
 }
 .myself a{
     display: flex;
@@ -67,6 +79,7 @@ body{
     font-size:29px;
     font-weight: bold;
     justify-content: space-evenly;
+    text-shadow: 1px 0px 15px var(--sooth-grey);
 }
 .img{
     width:100%;
@@ -157,8 +170,8 @@ body{
     margin-right:15px;
     filter: blur(2px);
     transform:translateX(-10px);
-    animation-name: rotate;
-    animation-duration: 3s;
+    animation-name: glow;
+    animation-duration: 2s;
 }
 .boxes:hover{
     filter: blur(0px);
@@ -408,6 +421,7 @@ border-style: inset;
         
     .myself li{
         margin:0.5rem;
+        
     }
     .line1{
         display:none;
